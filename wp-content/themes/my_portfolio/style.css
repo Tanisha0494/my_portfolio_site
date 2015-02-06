@@ -1,0 +1,285 @@
+/*
+Theme Name: My Portfolio 
+Theme URI: 
+Description: A theme for my portfolio.
+Author: Tanisha Rose
+Author URI: http://tanisharosemedia.com
+Version: 1.0
+License: GPLv2 
+License URI: license.txt
+Tags:gray, two-columns
+
+*/
+
+/* 
+== FLEX-BOX 
+*/
+
+
+/* apply a natural box layout model to all elements, but allowing components to change */
+html {
+  box-sizing: border-box;
+}
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+
+/* 
+  == Micro Clearfix 
+  http://nicolasgallagher.com/micro-clearfix-hack/
+*/
+
+/* For modern browsers */
+.cf:before,
+.cf:after {
+    content:"";
+    display:table;
+}
+
+.cf:after {
+    clear:both;
+}
+
+/* For IE 6/7 (trigger hasLayout) */
+.cf {
+    *zoom:1;
+}
+
+*, *:before, *:after {
+  -moz-box-sizing: border-box; 
+  -webkit-box-sizing: border-box; 
+  box-sizing: border-box;
+ }
+
+ /*==@Font-Face*/
+ @font-face {
+    font-family: 'texgyreadventorregular';
+    src: url('styles/texgyreadventor-regular-webfont.eot');
+    src: url('styles/texgyreadventor-regular-webfont.eot?#iefix') format('embedded-opentype'),
+         url('styles/texgyreadventor-regular-webfont.woff') format('woff'),
+         url('styles/texgyreadventor-regular-webfont.ttf') format('truetype'),
+         url('styles/texgyreadventor-regular-webfont.svg#texgyreadventorregular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'ADAM.CG PRO';
+    src: url('styles/ADAM.CG PRO.otf') format('opentype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+/*
+==Basic Styles
+*/
+
+html{
+	background:url('images/footer_lodyas.png');
+}
+
+body{
+	font-family: 'texgyreadventorregular';
+	font-weight: normal;
+  font-style: normal;
+  font-size:100%;
+  width:90%;
+  margin:0 auto;
+  color:#FFF;
+}
+
+
+
+
+/*
+==Body Styles
+*/
+
+.hentry * {
+  max-width:100%;
+  height:auto;
+}
+
+h1,h2,h3,h4,h5,h6{
+	font-family: 'ADAM.CG PRO';
+	font-weight: normal;
+    font-style: normal;
+}
+
+h1{
+	font-size:2rem;
+	color:#4CAE4E;
+	margin-bottom:10px;
+}
+
+h2{
+	font-size:1.5rem;
+	color:#F0592B;
+}
+
+.hide{
+  display:none;
+}
+
+section.type-post{
+	font-size:1rem;
+	color:#FFF;
+	background:rgba(32,32,32,0.3);
+	padding:1em;
+	margin-top:1em;
+	line-height:1.5rem;
+}
+
+h2.post-title a{
+	margin-bottom:30px;
+	color:#4CAE4E;
+	text-decoration:none;
+}
+
+h2.post-title a:hover,
+h2.post-title a:focus{
+	text-decoration: underline;
+}
+
+/*==NAVIGATION STYLES*/
+
+.gnav .gmenu li a{
+  float:left;
+  width:30%;
+  margin:2%;
+  color:#FFF;
+  text-decoration:none;
+  font-size:1.5rem;
+  display:block;
+  padding:3%;
+  text-align:center;
+}
+
+.gnav .gmenu li.gblog a{
+  background-color:#38A4DD;
+}
+
+
+.gnav .gmenu li.gblog a:hover,
+.gnav .gmenu li.gblog a:focus {
+  background-color:transparent;
+  color:#38A4DD;
+  outline:4px solid #38A4DD;
+
+}
+
+.blog .gnav .gmenu li.gblog a{
+  background-color:transparent;
+  color:#38A4DD;
+  border:4px solid #38A4DD;
+
+}
+
+p{
+  margin:1em .5em;
+
+}
+
+article.postmeta{
+	background:rgba(32,32,32,0.3);
+	padding:5px;
+}
+
+article.postmeta a,
+article.entry-content a{
+  color:#38A4DC;
+  text-decoration:none;
+}
+
+article.postmeta a:hover,
+article.entry-content a:hover,
+article.postmeta a:focus,
+article.entry-content a:focus{
+  text-decoration:underline;
+}
+
+article span{
+	font-size:1rem;
+	color:#FFF;
+	margin:10px;
+	display:block;
+}
+
+.hentry .entry-content ul{
+  padding-left:1rem;
+  list-style-type:disc;
+  color:#FFF;
+}
+
+.alignleft, .thumb{
+    float:left;
+
+}
+
+.alignright{
+    float:right;
+
+}
+
+.aligncenter{
+  text-align:center;
+}
+
+.thumb{
+  margin:1em .75em;
+}
+
+img{
+  padding: 0 .5em;
+}
+
+.gallery{
+  padding:1rem;
+}
+
+.gallery img{
+  margin:0;
+}
+
+.format-gallery, .format-image, .gallery{
+  
+}
+
+.format-video{
+  
+}
+
+.format-quote{
+  position:relative;
+  width:auto;
+  quotes: "“" "”" "‘" "’";
+}
+
+.format-quote:before {
+    content: open-quote;
+    position:absolute;
+    font-size:6em;
+    margin:0;
+    padding:0;
+    top:.65rem;
+    left:-0.7rem;
+    color:#FFF;
+}
+
+.format-quote h2, .format-quote .postmeta{
+  display:none;
+}
+
+div.wp-pagenavi{
+  margin:1em 0;
+}
+
+div.wp-pagenavi a,
+div.wp-pagenavi span{
+  color:#FFF;
+}
+
+/*==FOOTER STYLES*/
+footer{
+  background-color:#202020;
+}
